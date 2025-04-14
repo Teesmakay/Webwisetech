@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request a Quote | WebWiseTech Solutions</title>
+  <meta name="description" content="Get a free quote for website design, verified B2B databases, email campaigns or SEO. Tailored solutions for African SMEs.">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("pLWCkusN34A8Sb8S9"); // Your EmailJS public key
+    })();
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
+    .hero-quote {
+      background: url('https://images.unsplash.com/photo-1581091870627-3f3e5a6d7e41?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+    }
+    .hero-quote .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
+      border-radius: 10px;
+    }
+    .hero-quote h1 {
+      color: white;
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+    .hero-quote p {
+      color: #f0f0f0;
+      font-size: 1.2rem;
+    }
+    .quote-form-section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    #quote-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    #quote-form input,
+    #quote-form textarea {
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    #quote-form button {
+      padding: 14px;
+      font-size: 1.1rem;
+      background-color: #3182ce;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    #thank-you {
+      display: none;
+      text-align: center;
+      color: green;
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f1f1f1;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body style="background-color: #fafafa;">
+  <header>
+    <nav style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background-color: #1a202c;">
+      <div class="logo" style="display: flex; align-items: center;">
+        <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+          <img src="webwisetech-logo-bluewhite.png" alt="WebWiseTech Logo" style="height: 50px;">
+          <span style="color: white; font-size: 1.2rem; margin-left: 8px;">WebWiseTech</span>
+        </a>
+      </div>
+      <ul style="list-style: none; display: flex; gap: 20px; margin: 0; padding: 0;">
+        <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+        <li><a href="services.html#services" style="color: white; text-decoration: none;">Services</a></li>
+        <li><a href="buy-database.html" style="color: white; text-decoration: none;">Buy Database</a></li>
+        <li><a href="index.html#about" style="color: white; text-decoration: none;">About</a></li>
+        <li><a href="index.html#contact" style="color: white; text-decoration: none;">Contact</a></li>
+        <li><a href="quote.html" class="active" style="color: #90cdf4; text-decoration: none;">Quote</a></li>
+      </ul>
+    </nav>
+  </header>
+  </header>
+
+  <main>
+    <section class="hero-quote">
+      <div class="overlay">
+        <h1>Get a Free Quote</h1>
+        <p>Tell us about your project — web design, B2B data, marketing or SEO — and we'll get back to you within 24 hours.</p>
+      </div>
+    </section>
+
+    <section class="quote-form-section">
+      <form id="quote-form" onsubmit="sendEmail(event)">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="contact_number" placeholder="Contact Number" required>
+        <input type="text" name="service" placeholder="What service do you need?" required>
+        <textarea name="details" placeholder="Describe your project..." required></textarea>
+        <button type="submit">Request Quote</button>
+      </form>
+      <div id="thank-you">
+        ✅ Thank you! Your request has been received. We'll be in touch shortly.
+      </div>
+    </section>
+
+    <section style="text-align: center; padding: 40px 20px;">
+      <p>Prefer to speak directly? Email us at <a href="mailto:hello@webwisetech.co.za">hello@webwisetech.co.za</a> or call <a href="tel:+27713853662">+27 71 385 3662</a>.</p>
+    </section>
+  </main>
+
+  <footer style="background-color: #000; color: #fff; text-align: center; padding: 20px;">
+    <p>&copy; 2025 WebWiseTech Solutions. All Rights Reserved.</p>
+  </footer>
+
+  <!-- EmailJS Form Handler -->
+  <script>
+    function sendEmail(event) {
+      event.preventDefault();
+      const form = document.getElementById('quote-form');
+
+      emailjs.sendForm('service_ejvwqzl', 'template_48jwm0r', form)
+        .then(() => {
+          form.reset();
+          document.getElementById('thank-you').style.display = 'block';
+
+          if (typeof gtag === "function") {
+            gtag('event', 'quote_form_submitted');
+          }
+          if (typeof fbq === "function") {
+            fbq('track', 'Lead');
+          }
+        }, (error) => {
+          console.error('EmailJS error:', error);
+          alert('Oops! Something went wrong. Please try again.');
+        });
+    }
+  </script>
+</body>
+</html>
+
