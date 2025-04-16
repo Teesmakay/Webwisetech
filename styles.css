@@ -321,5 +321,47 @@ form button:hover {
     padding: 60px 15px;
   }
 }
+/* Show full menu and hide hamburger on desktop */
+@media (min-width: 768px) {
+  #hamburger {
+    display: none;
+  }
+
+  nav ul {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+  }
+}
+
+/* Show hamburger and hide nav on small screens */
+@media (max-width: 767px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #1a202c;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  #hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  #hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+  }
+}
 
 
