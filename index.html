@@ -61,32 +61,6 @@
   }
   </script>
 </head>
- <script>
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
-  const header = document.querySelector('header');
-
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
-
-  let lastScrollTop = 0;
-
-  window.addEventListener('scroll', function () {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (scrollTop > lastScrollTop) {
-      // Scrolling down
-      header.style.top = '-100px'; // hide
-    } else {
-      // Scrolling up
-      header.style.top = '0'; // show
-    }
-
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-  });
-</script>
-
 
 
 <body style="background-color: #fafafa;">
@@ -290,5 +264,38 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  const header = document.querySelector('header');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
+  let lastScrollTop = 0;
+
+  window.addEventListener('scroll', function () {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // Scrolling down
+      header.style.top = '-100px'; // hide navbar
+    } else {
+      // Scrolling up
+      header.style.top = '0'; // show navbar
+    }
+
+    // Shrink navbar when scrolling
+    if (scrollTop > 50) {
+      header.classList.add('shrink');
+    } else {
+      header.classList.remove('shrink');
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  });
+</script>
+
 </body>
 </html>
