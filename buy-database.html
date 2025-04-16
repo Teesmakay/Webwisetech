@@ -27,6 +27,12 @@
       align-items: center;
       padding: 10px 20px;
       background-color: #1a202c;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      height: 70px;
     }
 
     .logo {
@@ -67,7 +73,7 @@
     .section {
       max-width: 900px;
       margin: 60px auto;
-      padding: 20px;
+      padding: 100px 20px 20px; /* Top padding adjusted for fixed navbar */
       line-height: 1.8;
       font-size: 1.05rem;
     }
@@ -163,9 +169,10 @@
     <p>Click below to request a custom quote or get a sample tailored to your needs.</p>
     <a href="quote.html" class="btn">Request a Quote</a>
     <p style="margin-top: 20px;">or email us at <strong>info@webwisetech.co.za</strong></p>
+
     <!-- Bootstrap JS (for interactive features) -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </section>
 
   <footer>
