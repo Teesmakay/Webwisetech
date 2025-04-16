@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <!-- Bootstrap CSS (via CDN) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
   <title>Buy B2B Database | WebWiseTech</title>
   <meta name="description" content="Buy verified B2B business databases from South Africa, SADC, West Africa and beyond. Filter by role, region, and industry.">
@@ -21,59 +19,30 @@
       color: #1a1a1a;
     }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
+    .navbar {
       background-color: #1a202c;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      height: 70px;
     }
 
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-
-    .logo img {
-      height: 50px;
-      margin-right: 10px;
-    }
-
-    .logo span {
-      color: white;
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: white;
+    .navbar-brand,
+    .navbar-nav .nav-link {
+      color: white !important;
       font-weight: 500;
     }
 
-    nav ul li a.active,
-    nav ul li a:hover {
-      color: #90cdf4;
+    .navbar-nav .nav-link.active,
+    .navbar-nav .nav-link:hover {
+      color: #90cdf4 !important;
+    }
+
+    .navbar-brand img {
+      height: 50px;
+      margin-right: 10px;
     }
 
     .section {
       max-width: 900px;
       margin: 60px auto;
-      padding: 100px 20px 20px; /* Top padding adjusted for fixed navbar */
+      padding: 120px 20px 20px;
       line-height: 1.8;
       font-size: 1.05rem;
     }
@@ -122,21 +91,26 @@
 </head>
 <body>
   <header>
-    <nav>
-      <div class="logo">
-        <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+    <nav class="navbar navbar-expand-md fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
           <img src="webwisetech-logo-bluewhite.png" alt="WebWiseTech Logo">
           <span>WebWiseTech</span>
         </a>
+        <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link active" href="buy-database.html">Buy Database</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="Quote.html">Get a Quote</a></li>
+          </ul>
+        </div>
       </div>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html#services">Services</a></li>
-        <li><a href="buy-database.html" class="active">Buy Database</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-        <li><a href="Quote.html">Get a Quote</a></li>
-      </ul>
     </nav>
   </header>
 
@@ -169,14 +143,14 @@
     <p>Click below to request a custom quote or get a sample tailored to your needs.</p>
     <a href="quote.html" class="btn">Request a Quote</a>
     <p style="margin-top: 20px;">or email us at <strong>info@webwisetech.co.za</strong></p>
-
-    <!-- Bootstrap JS (for interactive features) -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </section>
 
   <footer>
     <p>&copy; 2025 WebWiseTech Solutions. All Rights Reserved.</p>
   </footer>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
