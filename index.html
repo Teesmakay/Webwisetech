@@ -61,6 +61,15 @@
   }
   </script>
 </head>
+  <script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+
 
 <body style="background-color: #fafafa;">
   <header>
