@@ -226,64 +226,52 @@ From responsive web design and verified B2B data to results-driven email marketi
 <div class="service-card"><p>"The email campaign boosted our signups by 40%! Love the support and data quality."</p><p><strong>- Nomsa M., South Africa</strong></p></div>
 </div>
 </section>
-
-<!-- CONTACT -->
-<section id="contact" class="section contact" style="background-color:#eef2f7; padding:40px 20px;">
-  <h2>Contact Us</h2>
-  <div class="about-container" style="max-width:800px; margin:auto;">
-    <div class="about-text" style="margin-bottom:30px;">
-      <p><i class="fas fa-envelope"></i> <a href="mailto:marketing@webwisetech.co.za">marketing@webwisetech.co.za</a></p>
-      <p><i class="fas fa-map-marker-alt"></i> Johannesburg, South Africa</p>
-      <div style="margin-top:1rem;">
-        <a href="https://facebook.com/webwisetech" target="_blank" style="margin-right:1rem; color:#3b5998;"><i class="fab fa-facebook fa-lg"></i></a>
-        <a href="https://twitter.com/webwisetech" target="_blank" style="margin-right:1rem; color:#1da1f2;"><i class="fab fa-twitter fa-lg"></i></a>
-        <a href="https://linkedin.com/company/webwisetech" target="_blank" style="margin-right:1rem; color:#0077b5;"><i class="fab fa-linkedin fa-lg"></i></a>
-        <a href="https://instagram.com/webwisetech" target="_blank" style="color:#e1306c;"><i class="fab fa-instagram fa-lg"></i></a>
-      </div>
-    </div>
-
-  <!-- Contact Form -->
-<div class="contact-form-section" style="padding: 20px 0;">
-  <form id="contact-form" style="display:flex; flex-direction:column; gap:15px;">
-    <input type="text" name="name" placeholder="Your Name" required style="width:100%; padding:12px; border:1px solid #ccc; border-radius:6px;">
-    <input type="email" name="email" placeholder="Your Email" required style="width:100%; padding:12px; border:1px solid #ccc; border-radius:6px;">
-    <textarea name="message" placeholder="Write your message..." required style="width:100%; padding:12px; border:1px solid #ccc; border-radius:6px; min-height:120px;"></textarea>
-    <button type="submit" style="padding:14px; background-color:#3182ce; color:#fff; border:none; border-radius:6px; cursor:pointer;">Send Message</button>
+<!-- Contact Form -->
+<div class="contact-form-section" style="padding: 20px 0; max-width:600px; margin:auto;">
+  <form id="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Write your message..." required></textarea>
+    <button type="submit">Send Message</button>
   </form>
-  <!-- Inline Thank You Message -->
-  <div id="thank-you" style="display:none; color:green; margin-top:15px; font-weight:600;">✅ Message sent successfully!</div>
+  <div id="thank-you" style="display:none; color:green; margin-top:10px;">✅ Message sent successfully!</div>
 </div>
 
-<!-- Scripts -->
-<script src="https://cdn.emailjs.com/dist/email.min.js" defer></script>
-<script defer>
-  (function() {
-    emailjs.init("pLWCkusN34A8Sb8S9"); // Updated Public Key
-  })();
+<!-- Footer -->
+<footer style="text-align:center; padding:20px; background-color:#000; color:#fff;">
+  <p>&copy; 2025 WebWiseTech Solutions. All Rights Reserved.</p>
+</footer>
 
-  document.addEventListener("DOMContentLoaded", function() {
+<!-- Include EmailJS SDK -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<!-- Contact Form JS -->
+<script>
+  // Initialize EmailJS
+  emailjs.init("pLWCkusN34A8Sb8S9"); // Your public key
+
+  // Wait for the page to fully load
+  window.addEventListener("load", function() {
     const form = document.getElementById("contact-form");
     const thankYou = document.getElementById("thank-you");
+    const submitBtn = form.querySelector("button[type='submit']");
 
     form.addEventListener("submit", function(event) {
       event.preventDefault();
 
-      // Optional: disable button to prevent multiple clicks
-      const submitBtn = form.querySelector("button[type='submit']");
+      // Disable button while sending
       submitBtn.disabled = true;
       submitBtn.textContent = "Sending...";
 
-      emailjs.sendForm("service_ejvwqzl", "template_c96yqan", this)
-        .then(function() {
+      emailjs.sendForm("service_ejvwqzl", "template_c96yqan", form)
+        .then(function(response) {
           form.reset();
+          thankYou.style.display = "block";
           submitBtn.disabled = false;
           submitBtn.textContent = "Send Message";
-          thankYou.style.display = "block";
 
-          // Hide the message after 5 seconds
-          setTimeout(() => {
-            thankYou.style.display = "none";
-          }, 5000);
+          // Hide thank-you after 5 seconds
+          setTimeout(() => { thankYou.style.display = "none"; }, 5000);
         }, function(error) {
           console.error("EmailJS error:", error);
           alert("❌ Failed to send message. Please try again later.");
@@ -293,6 +281,5 @@ From responsive web design and verified B2B data to results-driven email marketi
     });
   });
 </script>
-
 
 
