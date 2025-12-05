@@ -242,74 +242,57 @@ From responsive web design and verified B2B data to results-driven email marketi
       </div>
     </div>
 
-    <!-- Contact Form -->
-    <div class="contact-form-section" style="padding: 20px 0;">
-      <form id="contact-form" style="display:flex; flex-direction:column; gap:15px;">
-        <input type="text" name="name" placeholder="Your Name" required style="width:100%; padding:12px; border:1px solid #ccc; border-radius:6px;">
-        <input type="email" name="email" placeholder="Your Email" required style="width:100%; padding:12px; border:1px solid #ccc; border-radius:6px;">
-        <textarea name="message" placeholder="Write your message..." required style="width:100%; padding:12px; border:1px solid #ccc; border-radius:6px; min-height:120px;"></textarea>
-        <button type="submit" style="padding:14px; background-color:#3182ce; color:#fff; border:none; border-radius:6px; cursor:pointer;">Send Message</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta" style="text-align:center; padding:40px 20px; background-color:#fff;">
-  <h2>Ready to Grow?</h2>
-  <p>Whether you want leads, a better site, or powerful marketing, we’ve got you.</p>
-  <a href="Quote.html" class="btn" style="padding:12px 25px; background-color:#3182ce; color:#fff; border-radius:6px; text-decoration:none;">Get a Free Quote</a>
-</section>
-
-<!-- Floating Contact Button -->
-<a href="#contact" class="btn" style="position: fixed; bottom: 20px; right: 20px; z-index:1000; padding:12px 18px; background-color:#3182ce; color:#fff; border-radius:50px; text-decoration:none;">Contact</a>
-
-<!-- FAQ -->
-<section class="section faq" style="background-color:#f8f9fb; padding:40px 20px;">
-  <h2>Frequently Asked Questions</h2>
-  <div class="faq-list" style="max-width:800px; margin:auto;">
-    <h3>What is a B2B database?</h3>
-    <p>It’s a list of verified business contacts used for marketing, lead generation, and outreach.</p>
-    <h3>Do you offer website maintenance?</h3>
-    <p>Yes, we offer ongoing website support and updates tailored to SMEs.</p>
-    <h3>Can I filter leads by job title or country?</h3>
-    <p>Absolutely. You can filter B2B data by location, industry, job role, and more.</p>
-  </div>
-</section>
-
-<!-- GEO SEO Hidden Content -->
-<div style="display:none;">
-  WebWiseTech offers B2B databases in South Africa, Nigeria, Kenya, and Ghana. We also build websites for small businesses in Johannesburg, Cape Town, Lagos, Nairobi and Accra.
+  <!-- Contact Form -->
+<div class="contact-form-section" style="padding: 20px 0;">
+  <form id="contact-form" style="display:flex; flex-direction:column; gap:15px;">
+    <input type="text" name="name" placeholder="Your Name" required style="width:100%; padding:12px; border:1px solid #ccc; border-radius:6px;">
+    <input type="email" name="email" placeholder="Your Email" required style="width:100%; padding:12px; border:1px solid #ccc; border-radius:6px;">
+    <textarea name="message" placeholder="Write your message..." required style="width:100%; padding:12px; border:1px solid #ccc; border-radius:6px; min-height:120px;"></textarea>
+    <button type="submit" style="padding:14px; background-color:#3182ce; color:#fff; border:none; border-radius:6px; cursor:pointer;">Send Message</button>
+  </form>
+  <!-- Inline Thank You Message -->
+  <div id="thank-you" style="display:none; color:green; margin-top:15px; font-weight:600;">✅ Message sent successfully!</div>
 </div>
-
-<!-- FOOTER -->
-<footer style="text-align:center; padding:20px; background-color:#000; color:#fff;">
-  <p>&copy; 2025 WebWiseTech Solutions. All Rights Reserved.</p>
-</footer>
 
 <!-- Scripts -->
 <script src="https://cdn.emailjs.com/dist/email.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" defer></script>
 <script defer>
-  
   (function() {
     emailjs.init("pLWCkusN34A8Sb8S9"); // Updated Public Key
   })();
 
-  document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
+  document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("contact-form");
+    const thankYou = document.getElementById("thank-you");
 
-    emailjs.sendForm("service_ejvwqzl", "template_c96yqan", this)
-      .then(
-        function() {
-          alert("Message Sent Successfully!");
-        },
-        function(error) {
-          alert("Failed to send message. Try again! Error: " + JSON.stringify(error));
-        }
-      );
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // Optional: disable button to prevent multiple clicks
+      const submitBtn = form.querySelector("button[type='submit']");
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending...";
+
+      emailjs.sendForm("service_ejvwqzl", "template_c96yqan", this)
+        .then(function() {
+          form.reset();
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Send Message";
+          thankYou.style.display = "block";
+
+          // Hide the message after 5 seconds
+          setTimeout(() => {
+            thankYou.style.display = "none";
+          }, 5000);
+        }, function(error) {
+          console.error("EmailJS error:", error);
+          alert("❌ Failed to send message. Please try again later.");
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Send Message";
+        });
+    });
   });
 </script>
+
 
 
