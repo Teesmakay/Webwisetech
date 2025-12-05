@@ -1,229 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Services | WebWiseTech Solutions</title>
-  <meta name="description" content="Explore professional services by WebWiseTech Solutions. From website design to B2B databases, SEO, and email marketing across Africa." />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Database360 offers POPIA-compliant data solutions for B2B lead generation, telemarketing, and SMS campaigns in South Africa and across Africa.">
-  <meta name="keywords" content="POPI compliant data, lead generation, B2B data South Africa, telemarketing data, SMS marketing list, African business database, Database360 services, compliant contact lists">
-  <meta name="author" content="Database360">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="webwisetech-logo-bluewhite.png" type="image/png">
+<!-- SEO Meta -->
+<title>Our Services | WebWiseTech Solutions</title>
+<meta name="description" content="Explore professional services by WebWiseTech Solutions. From website design to B2B databases, SEO, and email marketing across Africa." />
+<meta name="keywords" content="POPI compliant data, lead generation, B2B data South Africa, telemarketing data, SMS marketing list, African business database, Database360 services, compliant contact lists">
+<link rel="canonical" href="https://webwisetech.co.za/services.html" />
+<link rel="icon" href="webwisetech-logo-bluewhite.png" type="image/png">
 
-  <!-- JSON-LD Schema Markup -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "WebWiseTech Solutions",
-    "url": "https://www.yourdomain.com",
-    "logo": "https://www.yourdomain.com/webwisetech-logo-bluewhite.png",
-    "sameAs": [
-      "https://facebook.com/yourpage",
-      "https://twitter.com/yourhandle"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Johannesburg",
-      "addressCountry": "ZA",
-      "postalCode": "2190"
-    }
-  }
-  </script>
+<!-- Open Graph / Social -->
+<meta property="og:title" content="Our Services | WebWiseTech Solutions">
+<meta property="og:description" content="Website Design, B2B Database Sales, Email Marketing & SEO services across Africa. POPIA & GDPR compliant.">
+<meta property="og:url" content="https://webwisetech.co.za/services.html">
+<meta property="og:image" content="https://webwisetech.co.za/assets/og-services.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Our Services | WebWiseTech Solutions">
+<meta name="twitter:description" content="Professional services for African businesses: website design, B2B data, email marketing & SEO.">
+<meta name="twitter:image" content="https://webwisetech.co.za/assets/og-services.jpg">
 
-  <style>
-    body {
-      padding-top: 75px;
+<!-- Fonts & CSS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<link rel="stylesheet" href="styles.css" />
+
+<!-- JSON-LD Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "WebWiseTech Solutions",
+      "url": "https://webwisetech.co.za",
+      "logo": "https://webwisetech.co.za/webwisetech-logo-bluewhite.png",
+      "sameAs": [
+        "https://facebook.com/webwisetech",
+        "https://twitter.com/webwisetech",
+        "https://www.linkedin.com/company/webwisetech",
+        "https://www.instagram.com/webwisetech"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Johannesburg",
+        "addressCountry": "ZA",
+        "postalCode": "2190"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Website Design & Development",
+      "provider": {"@type":"Organization","name":"WebWiseTech Solutions"},
+      "areaServed":["South Africa","SADC","West Africa","East Africa"]
+    },
+    {
+      "@type": "Service",
+      "name": "B2B Database Sales",
+      "provider": {"@type":"Organization","name":"WebWiseTech Solutions"}
+    },
+    {
+      "@type": "Service",
+      "name": "Email Marketing Campaigns",
+      "provider": {"@type":"Organization","name":"WebWiseTech Solutions"}
+    },
+    {
+      "@type": "Service",
+      "name": "Search Engine Optimization (SEO)",
+      "provider": {"@type":"Organization","name":"WebWiseTech Solutions"}
     }
-    .hero-section {
-      position: relative;
-      height: 80vh;
-      background: url('https://media.istockphoto.com/id/873491918/video/financial-data-and-graphs-on-a-blue-background.jpg?s=640x640&k=20&c=fbaqbZybRtfaFmzlwDF_e9kBc3Z7lVycZSgbahcVkkc=') center/cover no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      text-align: center;
-    }
-    .hero-overlay {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 2rem;
-      border-radius: 12px;
-    }
-    .hero-btn {
-      background-color: #00b4d8;
-      border: none;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-top: 1rem;
-      transition: background 0.3s;
-    }
-    .hero-btn:hover {
-      background-color: #0077b6;
-    }
-    .services {
-      max-width: 1100px;
-      margin: 2rem auto;
-      padding: 1rem;
-    }
-    .services h2 {
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #023e8a;
-    }
-    .service {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      margin-bottom: 2rem;
-      animation: fadeInUp 1s ease forwards;
-      opacity: 0;
-    }
-    .service-icon {
-      font-size: 2rem;
-      color: #00b4d8;
-      margin-bottom: 0.5rem;
-    }
-    .service ul {
-      padding-left: 1.5rem;
-    }
-    @keyframes fadeInUp {
-      0% { transform: translateY(30px); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
-    }
-    footer {
-      background-color: #0d1b2a;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-    }
-    .navbar-toggler {
-      border-color: white;
-    }
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    }
-    .nav-link:hover {
-      text-decoration: underline;
-    }
-  </style>
+  ]
+}
+</script>
+
+<style>
+body { padding-top: 75px; font-family:'Inter',sans-serif; background:#fafafa; color:#1a1a1a;}
+.navbar { background-color:#1a202c;}
+.navbar-toggler { border-color:white;}
+.navbar-toggler-icon { background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");}
+.nav-link.text-white.active { color:#90cdf4 !important; }
+.nav-link:hover { text-decoration:underline;}
+.hero-section { position:relative; height:80vh; background:url('https://media.istockphoto.com/id/873491918/video/financial-data-and-graphs-on-a-blue-background.jpg?s=640x640&k=20&c=fbaqbZybRtfaFmzlwDF_e9kBc3Z7lVycZSgbahcVkkc=') center/cover no-repeat; display:flex; justify-content:center; align-items:center; color:#fff; text-align:center;}
+.hero-overlay { background:rgba(0,0,0,0.5); padding:2rem; border-radius:12px;}
+.hero-btn { background:#00b4d8; border:none; color:white; padding:.75rem 1.5rem; font-size:1rem; border-radius:8px; cursor:pointer; margin-top:1rem; transition:background .3s;}
+.hero-btn:hover { background:#0077b6; }
+.services { max-width:1100px; margin:2rem auto; padding:1rem;}
+.services h2 { text-align:center; margin-bottom:2rem; color:#023e8a;}
+.service { background:#fff; padding:1.5rem; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1); margin-bottom:2rem; animation:fadeInUp 1s ease forwards; opacity:0;}
+.service-icon { font-size:2rem; color:#00b4d8; margin-bottom:.5rem;}
+.service ul { padding-left:1.5rem;}
+@keyframes fadeInUp { 0% { transform:translateY(30px); opacity:0;} 100% { transform:translateY(0); opacity:1;} }
+footer { background:#0d1b2a; color:#fff; text-align:center; padding:1rem;}
+</style>
+
 </head>
-
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #1a202c;">
-    <div class="container-fluid">
-      <a class="navbar-brand text-white d-flex align-items-center" href="index.html">
-        <img src="webwisetech-logo-bluewhite.png" alt="WebWiseTech Solutions Logo" style="height: 50px; margin-right: 8px;">
-        WebWiseTech
-      </a>
-      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link text-white active" href="services.html#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="buy-database.html">Buy Database</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="index.html#about">About</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="index.html#contact">Contact</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="Quote.html">Get a Quote</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-overlay">
-      <h1>Our Professional Services</h1>
-      <p>Website Design. B2B Data. Email Marketing. SEO — Built for African Businesses.</p>
-      <a href="index.html#quote"><button class="hero-btn">Request a Quote</button></a>
-    </div>
-  </section>
-
-
-
-  <!-- Services Section -->
-  <section class="section services" id="services">
-    <h2>What We Offer</h2>
-
-    <div class="service" id="webdesign" style="animation-delay: 0s;">
-      <i class="fas fa-laptop-code service-icon"></i>
-      <h3>Website Design & Development</h3>
-      <p>We create stunning, responsive, and SEO-optimized websites for startups and SMEs across Africa.</p>
-      <ul>
-        <li>3–5 Page Business Websites</li>
-        <li>Mobile-Friendly Design</li>
-        <li>SEO & Speed Optimization</li>
-        <li>Domain & Hosting Setup</li>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white d-flex align-items-center" href="index.html">
+      <img src="webwisetech-logo-bluewhite.png" alt="WebWiseTech Solutions Logo" style="height:50px;margin-right:8px;">
+      WebWiseTech
+    </a>
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white active" href="services.html#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="buy-database.html">Buy Database</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="index.html#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="Quote.html">Get a Quote</a></li>
       </ul>
     </div>
-    
-    <div class="service" id="database" style="animation-delay: 0.2s;">
-      <i class="fas fa-database service-icon"></i>
-      <h3>B2B Database Sales</h3>
-      <p>Access highly targeted and verified databases across industries — CEOs, decision-makers, and professionals.</p>
-      <ul>
-        <li>Industry-Specific Lists (Retail, Finance, Tech...)</li>
-        <li>Decision Maker Contacts</li>
-        <li>Phone & Email Verified</li>
-        <li>Available by Region (SA, SADC, West Africa, etc.)</li>
-      </ul>
-    </div>
-    
-    <div class="service" id="email" style="animation-delay: 0.4s;">
-      <i class="fas fa-envelope-open-text service-icon"></i>
-      <h3>Email Marketing Campaigns</h3>
-      <p>Launch effective email marketing campaigns that convert. We do the design, copy, send-outs, and reports.</p>
-      <ul>
-        <li>Email Blasts & Lead Nurturing</li>
-        <li>Professional Email Templates</li>
-        <li>Tracking & Performance Reports</li>
-        <li>High Inbox Delivery</li>
-      </ul>
-    </div>
-    
-    <div class="service" id="seo" style="animation-delay: 0.6s;">
-      <i class="fas fa-search-dollar service-icon"></i>
-      <h3>Search Engine Optimization (SEO)</h3>
-      <p>Improve your search visibility and rank higher with expert SEO strategies tailored for your niche.</p>
-      <ul>
-        <li>On-Page SEO (Content, Meta, Speed)</li>
-        <li>Local SEO for African Markets</li>
-        <li>Google My Business Setup</li>
-        <li>Keyword Research & Reports</li>
-      </ul>
-    </div>
-  </section>
+  </div>
+</nav>
 
-  <!-- CTA Section -->
-  <section class="section cta text-center">
-    <h2>Let’s Help You Build and Grow</h2>
-    <p>Our team is ready to deliver a modern website, quality leads, or effective campaigns tailored for your business.</p>
-    <a href="Quote.html"><button class="hero-btn">Get Started Now</button></a>
-  </section>
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-overlay">
+    <h1>Our Professional Services</h1>
+    <p>Website Design. B2B Data. Email Marketing. SEO — Built for African Businesses.</p>
+    <a href="Quote.html"><button class="hero-btn">Request a Quote</button></a>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 WebWiseTech Solutions. All Rights Reserved.</p>
-  </footer>
+<!-- Services Section -->
+<section class="section services" id="services">
+<h2>What We Offer</h2>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<div class="service" id="webdesign" style="animation-delay:0s;">
+  <i class="fas fa-laptop-code service-icon"></i>
+  <h3>Website Design & Development</h3>
+  <p>We create stunning, responsive, and SEO-optimized websites for startups and SMEs across Africa.</p>
+  <ul>
+    <li>3–5 Page Business Websites</li>
+    <li>Mobile-Friendly Design</li>
+    <li>SEO & Speed Optimization</li>
+    <li>Domain & Hosting Setup</li>
+  </ul>
+</div>
+
+<div class="service" id="database" style="animation-delay:0.2s;">
+  <i class="fas fa-database service-icon"></i>
+  <h3>B2B Database Sales</h3>
+  <p>Access highly targeted and verified databases across industries — CEOs, decision-makers, and professionals.</p>
+  <ul>
+    <li>Industry-Specific Lists (Retail, Finance, Tech...)</li>
+    <li>Decision Maker Contacts</li>
+    <li>Phone & Email Verified</li>
+    <li>Available by Region (SA, SADC, West Africa, etc.)</li>
+  </ul>
+</div>
+
+<div class="service" id="email" style="animation-delay:0.4s;">
+  <i class="fas fa-envelope-open-text service-icon"></i>
+  <h3>Email Marketing Campaigns</h3>
+  <p>Launch effective email marketing campaigns that convert. We handle design, copy, send-outs, and reports.</p>
+  <ul>
+    <li>Email Blasts & Lead Nurturing</li>
+    <li>Professional Email Templates</li>
+    <li>Tracking & Performance Reports</li>
+    <li>High Inbox Delivery</li>
+  </ul>
+</div>
+
+<div class="service" id="seo" style="animation-delay:0.6s;">
+  <i class="fas fa-search-dollar service-icon"></i>
+  <h3>Search Engine Optimization (SEO)</h3>
+  <p>Improve your search visibility and rank higher with expert SEO strategies tailored for your niche.</p>
+  <ul>
+    <li>On-Page SEO (Content, Meta, Speed)</li>
+    <li>Local SEO for African Markets</li>
+    <li>Google My Business Setup</li>
+    <li>Keyword Research & Reports</li>
+  </ul>
+</div>
+</section>
+
+<!-- CTA Section -->
+<section class="section cta text-center">
+<h2>Let’s Help You Build and Grow</h2>
+<p>Our team is ready to deliver a modern website, quality leads, or effective campaigns tailored for your business.</p>
+<a href="Quote.html"><button class="hero-btn">Get Started Now</button></a>
+</section>
+
+<!-- Footer -->
+<footer>
+<p>&copy; 2025 WebWiseTech Solutions. All Rights Reserved.</p>
+</footer>
+
+<!-- Bootstrap JS deferred -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>
